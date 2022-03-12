@@ -5,20 +5,25 @@ import SignIn from './pages/sign-in/SignIn';
 import Home from './pages/home/Home';
 import PrivateRoute from './components/PrivateRoute';
 import Profile from './pages/profile/Profile';
+import NewAction from './pages/new-action/NewAction';
+import { MonthContextProvider } from './components/context/MonthContext';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<PrivateRoute />}>
-          <Route path="/" element={<Home />} />
-        </Route>
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/sign-in" element={<SignIn />} />
-      </Routes>
-    </div>
+    <MonthContextProvider>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+          <Route path="/profile/:userId" element={<Profile />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/new-action" element={<NewAction />} />
+        </Routes>
+      </div>
+    </MonthContextProvider>
   );
 }
 

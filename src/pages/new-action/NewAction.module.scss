@@ -1,0 +1,90 @@
+@import '../../components/utils/variables.scss';
+
+.new-action {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-color: $main-color-dark-2;
+  color: $main-color-light-2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin: 4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    cursor: default;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22.5rem;
+      height: 1rem;
+      background-color: crimson;
+      bottom: -0.3rem;
+      opacity: 0.5;
+      left: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10rem;
+      height: 1rem;
+      background-color: crimson;
+      bottom: -0.3rem;
+      opacity: 0.5;
+      right: 0;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .type {
+      width: 30%;
+    }
+    .select {
+      background-color: inherit;
+      border: none;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      color: inherit;
+      outline: none;
+    }
+
+    .input {
+      padding: 1rem;
+      width: 30%;
+      font-size: 1.3rem;
+      margin: 1rem;
+      outline: 0;
+      background-color: inherit;
+      color: inherit;
+      border: none;
+      border-bottom: 1px solid $main-color-light-2;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      border: none;
+      color: inherit;
+      background-color: crimson;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: rgb(216, 57, 89);
+        transform: scale(1.05);
+      }
+    }
+  }
+}

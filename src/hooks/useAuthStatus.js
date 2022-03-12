@@ -12,7 +12,9 @@ function useAuthStatus() {
       onAuthStateChanged(auth, (user) => {
         if (user) {
           setLoggedIn(true);
-          console.log(loggedIn);
+          localStorage.setItem('currentUser', auth.currentUser.uid);
+        } else {
+          localStorage.removeItem('currentUser');
         }
         setLoading(false);
       });

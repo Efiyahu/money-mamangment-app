@@ -1,0 +1,46 @@
+@import '../utils/variables.scss';
+
+.sort {
+  grid-area: sort;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    margin: 1rem 0;
+    height: 6%;
+    border-bottom: 1px solid $main-color-light-2;
+    cursor: default;
+    &:hover {
+      color: $main-color-light;
+      border-color: $main-color-light;
+    }
+  }
+
+  .months {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .month {
+      cursor: pointer;
+      padding: 0.5rem 2rem;
+      font-size: 0.8em;
+      font-weight: bold;
+      transition: all 0.5s;
+      border-radius: 5px;
+      &:hover {
+        background-color: $main-color-light-2;
+        color: $main-color-dark-2;
+      }
+    }
+    .active {
+      background-color: $main-color-light-2;
+      color: $main-color-dark-2;
+    }
+  }
+}

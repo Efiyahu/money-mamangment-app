@@ -1,5 +1,6 @@
 @import '../../components/utils/variables.scss';
 
+////////// PROFILE SECTION /////////////////
 .profile {
   display: grid;
   width: 100%;
@@ -12,6 +13,7 @@
   grid-template-columns: 2fr 4fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   color: $main-color-light-2;
+  background-color: $main-color-dark-2;
   font-family: inherit;
 }
 .header,
@@ -20,60 +22,4 @@
 .nav,
 .sort {
   background-color: $main-color-dark-2;
-  border: 1px solid $main-color-light-2;
-}
-
-.header {
-  grid-area: header;
-}
-.chart {
-  grid-area: chart;
-}
-
-.main {
-  grid-area: main;
-}
-.nav {
-  grid-area: nav;
-}
-
-.sort {
-  grid-area: sort;
-}
-
-.header {
-  display: flex;
-  justify-content: space-evenly;
-
-  align-items: center;
-  cursor: default;
-
-  .image-container {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-
-    .image {
-      height: 100%;
-      width: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .name {
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .subtext {
-      font-size: 0.7rem;
-      font-style: italic;
-    }
-  }
 }

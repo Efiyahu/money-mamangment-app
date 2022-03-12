@@ -1,0 +1,41 @@
+@import '../utils/variables.scss';
+
+.header {
+  grid-area: header;
+  background-color: $main-color-dark-2;
+  display: flex;
+  justify-content: space-evenly;
+  border: 3px solid $main-color-dark;
+
+  align-items: center;
+  cursor: default;
+
+  .image-container {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+    .image {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .name {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .subtext {
+      font-size: 0.7rem;
+      font-style: italic;
+    }
+  }
+}

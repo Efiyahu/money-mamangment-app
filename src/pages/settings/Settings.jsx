@@ -41,14 +41,17 @@ function Settings() {
       <h1 className={classes.title}>Settings</h1>
       <div className={classes.container}>
         <div className={classes['update-profile']}>
-          <p onClick={handleClick}>Click to change display Name </p>
-          <input
-            maxLength={20}
-            className={classes.input}
-            disabled={disabled}
-            value={updatedName}
-            onChange={(e) => setUpdatedName(e.target.value)}
-          />
+          <div>
+            <p onClick={handleClick}>Click to change display Name </p>
+            <input
+              maxLength={20}
+              className={classes.input}
+              disabled={disabled}
+              value={updatedName}
+              onChange={(e) => setUpdatedName(e.target.value)}
+            />
+          </div>
+          <p>Change Profile Image</p>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ function Header() {
   return (
     <nav className={classes.header}>
       <div className={classes.title}>
-        <h1 onClick={() => navigate('/')}>Budgety.</h1>
+        <h1 onClick={() => navigate('/')}>Boob.</h1>
       </div>
       {loggedIn ? (
         <p

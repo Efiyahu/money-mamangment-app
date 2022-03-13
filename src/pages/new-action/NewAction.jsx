@@ -1,4 +1,4 @@
-import { arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { db } from '../../components/utils/firebase.config';
 import classes from './NewAction.module.scss';

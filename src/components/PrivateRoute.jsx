@@ -3,7 +3,7 @@ import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import useAuthStatus from '../hooks/useAuthStatus';
 
-const PrivateRoute = () => {
+const PrivateRoute = ({ path }) => {
   const { loggedIn, loading } = useAuthStatus();
   const auth = getAuth();
 
@@ -14,7 +14,7 @@ const PrivateRoute = () => {
   return !loggedIn ? (
     <Outlet />
   ) : (
-    <Navigate to={`/profile/${auth.currentUser.uid && auth.currentUser.uid}`} />
+    <Navigate to={`${path}${auth.currentUser.uid && auth.currentUser.uid}`} />
   );
 };
 

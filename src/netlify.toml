@@ -1,0 +1,4 @@
+[build]
+base = "money-managment-app/"
+publish = "money-managment-app/build/"
+command = "npm run build"

@@ -21,7 +21,7 @@ function ProfileMain({ userInfo }) {
       </ul>
 
       {userInfo.userActions.map((action) => (
-        <Action userAction={action} />
+        <Action userAction={action} key={action.id} />
       ))}
     </main>
   );

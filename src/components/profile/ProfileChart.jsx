@@ -11,7 +11,7 @@ function ProfileChart({ userInfo }) {
   useEffect(() => {
     setIncome(0);
     setPayement(0);
-    userInfo.userActions.map((action) => {
+    userInfo.userActions.forEach((action) => {
       if (action.month === month) {
         if (action.type === 'income') {
           setIncome((prevIncome) => (prevIncome += Number(action.amount)));
@@ -19,8 +19,9 @@ function ProfileChart({ userInfo }) {
           setPayement((prevPayment) => (prevPayment += Number(action.amount)));
         }
       }
+      return;
     });
-    console.log(month);
+    // eslint-disable-next-line
   }, [month]);
 
   console.log(income, payment);

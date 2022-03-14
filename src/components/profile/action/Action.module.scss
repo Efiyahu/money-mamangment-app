@@ -13,8 +13,8 @@
   color: $main-color-light;
   @media (max-width: 600px) {
     width: 90%;
-    font-size: 0.6rem;
-    flex-direction: column;
+    font-size: 0.5rem;
+    font-weight: lighter;
   }
   &.income {
     background-color: rgb(15, 168, 15);
@@ -29,13 +29,5 @@
     width: 100%;
     text-align: center;
     cursor: default;
-
-    &:last-child {
-      font-size: 1.2rem;
-
-      &:hover {
-        color: $main-color-light-2;
-      }
-    }
   }
 }

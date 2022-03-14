@@ -11,10 +11,6 @@
   background-color: $main-color-dark-2;
 
   @media (max-width: 600px) {
-    margin: 1rem 0;
-    grid-row: 4/5;
-    grid-column: 1/6;
-    flex-direction: row;
   }
 
   .title {

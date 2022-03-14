@@ -15,6 +15,17 @@
   color: $main-color-light-2;
   background-color: $main-color-dark-2;
   font-family: inherit;
+
+  @media (max-width: 600px) {
+    grid-template-areas:
+      'header'
+      'main'
+      'sort'
+      'chart'
+      'nav';
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px repeat(4, 300px);
+  }
 }
 .header,
 .chart,

@@ -17,9 +17,6 @@ function Action({ userAction }) {
         <p>{userAction.type}</p>
         <p>{userAction.desc}</p>
         <p>{userAction.amount} $</p>
-        <p>
-          <AiFillDelete style={{ cursor: 'pointer' }} />
-        </p>
       </div>
     );
   }

@@ -16,6 +16,12 @@ body {
   scrollbar-width: none;
 }
 
+@media (max-width: 600px) {
+  body {
+    overflow: scroll;
+  }
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

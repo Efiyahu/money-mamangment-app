@@ -17,7 +17,6 @@ function ProfileMain({ userInfo }) {
         <li className={classes['actions-item']}>Type</li>
         <li className={classes['actions-item']}>Description</li>
         <li className={classes['actions-item']}>Amount</li>
-        <li className={classes['actions-item']}>Delete</li>
       </ul>
 
       {userInfo.userActions &&

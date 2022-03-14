@@ -62,7 +62,7 @@ function Settings() {
       <h1 className={classes.title}>Settings</h1>
       <div className={classes.container}>
         <div className={classes['update-profile']}>
-          <div>
+          <div className={classes['change-name']}>
             <p onClick={handleClick}>Click to change display Name </p>
             <input
               maxLength={20}
@@ -72,7 +72,7 @@ function Settings() {
               onChange={(e) => setUpdatedName(e.target.value)}
             />
           </div>
-          <div>
+          <div className={classes['change-image']}>
             <h3 style={{ marginBottom: '2rem' }}>Change Profile Image</h3>
             <input
               className={classes.input}

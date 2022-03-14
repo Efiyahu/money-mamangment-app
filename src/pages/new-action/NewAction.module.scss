@@ -10,12 +10,24 @@
   align-items: center;
 
   .title {
-    margin: 4rem 0;
+    margin: 2.5rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: default;
     position: relative;
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+      width: 90%;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      width: 90%;
+      text-align: center;
+    }
 
     &::before {
       content: '';
@@ -26,6 +38,10 @@
       bottom: -0.3rem;
       opacity: 0.5;
       left: 0;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
     &::after {
       content: '';
@@ -36,6 +52,10 @@
       bottom: -0.3rem;
       opacity: 0.5;
       right: 0;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -47,6 +67,14 @@
 
     .type {
       width: 30%;
+
+      @media (max-width: 600px) {
+        width: 80%;
+      }
+      @media (max-width: 768px) {
+        width: 60%;
+        font-size: 0.9rem;
+      }
     }
     .select {
       background-color: inherit;
@@ -61,13 +89,23 @@
     .input {
       padding: 1rem;
       width: 30%;
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin: 1rem;
       outline: 0;
       background-color: inherit;
       color: inherit;
       border: none;
       border-bottom: 1px solid $main-color-light-2;
+
+      @media (max-width: 600px) {
+        width: 80%;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        width: 60%;
+        font-size: 0.9rem;
+      }
     }
     .btn {
       padding: 1rem 2rem;
@@ -80,6 +118,10 @@
       letter-spacing: 1px;
       cursor: pointer;
       transition: all 0.5s;
+
+      @media (max-width: 600px) {
+        margin-top: 1rem;
+      }
 
       &:hover {
         background-color: rgb(216, 57, 89);

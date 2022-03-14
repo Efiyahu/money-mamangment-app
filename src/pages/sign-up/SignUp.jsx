@@ -112,7 +112,9 @@ function SignUp() {
             </label>
           </div>
         </div>
-        <button type="submit">Submit</button>
+        <button className={classes.btn} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

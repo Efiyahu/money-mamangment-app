@@ -12,7 +12,7 @@ import Settings from './pages/settings/Settings';
 function App() {
   return (
     <MonthContextProvider>
-      <div>
+      <div className="body-container">
         <Header />
         <Routes>
           <Route path="/" element={<PrivateRoute path="/profile/" />}>

@@ -20,9 +20,10 @@ function ProfileMain({ userInfo }) {
         <li className={classes['actions-item']}>Delete</li>
       </ul>
 
-      {userInfo.userActions.map((action) => (
-        <Action userAction={action} key={action.id} />
-      ))}
+      {userInfo.userActions &&
+        userInfo.userActions.map((action) => (
+          <Action userAction={action} key={action.id} />
+        ))}
     </main>
   );
 }

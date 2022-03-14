@@ -20,8 +20,11 @@ function Header() {
   return (
     <nav className={classes.header}>
       <div className={classes.title}>
-        <h1 onClick={() => navigate('/')}>Boob.</h1>
+        <h1 onClick={() => navigate('/')}>Budgety.</h1>
       </div>
+      <p className={classes.copyright}>
+        &copy; created by me Efi Alkhazov for my Portfolio Usage
+      </p>
       {loggedIn ? (
         <p
           style={{ cursor: 'pointer' }}

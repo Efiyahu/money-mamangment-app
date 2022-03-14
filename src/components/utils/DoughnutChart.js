@@ -9,7 +9,7 @@ function DoghnutChart({ chartData }) {
   const chartRef = useRef();
 
   const onClick = (e) => {
-    console.log(getElementAtEvent(chartRef.current, e));
+    getElementAtEvent(chartRef.current, e);
   };
 
   return (

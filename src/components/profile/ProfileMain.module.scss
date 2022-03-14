@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: calc(100vh - 200px);
   overflow: scroll;
   -ms-oveflow-style: none;
   scrollbar-width: none;
@@ -24,6 +24,10 @@
     background-color: rgb(20, 20, 20);
     cursor: default;
 
+    @media (max-width: 600px) {
+      font-size: 0.7rem;
+    }
+
     h2 {
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -31,6 +35,10 @@
     p {
       font-size: 0.7rem;
       opacity: 0.7;
+
+      @media (max-width: 600px) {
+        font-size: 0.6rem;
+      }
     }
   }
 
@@ -40,12 +48,26 @@
     justify-content: space-around;
     list-style: none;
 
+    @media (max-width: 600px) {
+      font-size: 0.6rem;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
     .actions-item {
       padding: 1rem 2rem 1rem 2rem;
       font-weight: bold;
       letter-spacing: 1px;
       border-bottom: 1px solid $main-color-light-2;
       cursor: default;
+      width: 80%;
+
+      @media (max-width: 600px) {
+        margin: 1rem 0.6rem 1rem 0.6rem;
+        padding: 0;
+        border: none;
+      }
     }
   }
 }

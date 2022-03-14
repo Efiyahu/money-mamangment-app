@@ -1,14 +1,25 @@
 @import '../utils/variables.scss';
 
 .header {
-  grid-area: header;
+  // grid-area: header;
+  grid-row: 1/2;
+  grid-column: 2/6;
   background-color: $main-color-dark-2;
   display: flex;
   justify-content: space-evenly;
   border: 3px solid $main-color-dark;
+  height: 120px;
 
   align-items: center;
   cursor: default;
+
+  @media (max-width: 600px) {
+    grid-column: 1/6;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    position: relative;
+  }
 
   .image-container {
     height: 100px;
@@ -28,14 +39,25 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 600px) {
+      padding: 1rem;
+    }
+
     .name {
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      @media (max-width: 600px) {
+        font-size: 1rem;
+      }
     }
 
     .subtext {
       font-size: 0.7rem;
       font-style: italic;
+      @media (max-width: 600px) {
+        font-size: 0.5rem;
+      }
     }
   }
 }

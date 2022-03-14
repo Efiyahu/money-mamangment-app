@@ -11,7 +11,6 @@ function ProfileSort() {
 
   return (
     <aside className={classes.sort}>
-      <h3>Select a month</h3>
       <ul className={classes.months}>
         <li
           className={`${classes.month} ${

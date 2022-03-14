@@ -71,5 +71,22 @@
         transition: all 0.5s;
       }
     }
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      border: none;
+      color: inherit;
+      background-color: crimson;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: rgb(216, 57, 89);
+        transform: scale(1.05);
+      }
+    }
   }
 }

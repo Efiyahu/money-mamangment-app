@@ -4,10 +4,22 @@ import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { AiOutlineLogout } from 'react-icons/ai';
 import classes from './ProfileNav.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { getAuth, signOut } from 'firebase/auth';
+import useAuthStatus from '../../hooks/useAuthStatus';
 
 function ProfileNav() {
   const userId = localStorage.getItem('currentUser');
   const navigate = useNavigate();
+  const { setLoggedIn } = useAuthStatus();
+
+  const signOutUser = async () => {
+    const auth = getAuth();
+
+    await signOut(auth);
+
+    setLoggedIn(false);
+    navigate('/');
+  };
 
   return (
     <nav className={classes.nav}>
@@ -22,7 +34,7 @@ function ProfileNav() {
         <li className={classes.option} onClick={() => navigate('/new-action')}>
           Add New Action <AiOutlinePlusCircle style={{ marginLeft: '.3rem' }} />
         </li>
-        <li className={classes.option}>
+        <li className={classes.option} onClick={signOutUser}>
           Logout <AiOutlineLogout style={{ marginLeft: '.3rem' }} />
         </li>
       </ul>

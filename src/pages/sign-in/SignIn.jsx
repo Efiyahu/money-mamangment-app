@@ -40,6 +40,9 @@ function SignUp() {
 
   return (
     <div className={classes['sign-in']}>
+      <p style={{ fontSize: '.8rem', marginTop: '1rem' }}>
+        Dummy user: email: "efraim@gmail.com" password: "123456"
+      </p>
       <form autoComplete="off" className={classes.form} onSubmit={handleSubmit}>
         <div className={classes.titles}>
           <h1 className={classes.main}>Sign In</h1>
@@ -77,7 +80,9 @@ function SignUp() {
             </label>
           </div>
         </div>
-        <button type="submit">Submit</button>
+        <button className={classes.btn} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

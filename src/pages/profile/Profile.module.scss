@@ -4,14 +4,14 @@
 .profile {
   display: grid;
   width: 100%;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   grid-template-areas:
     'chart header header'
     'chart main sort'
     'nav main sort'
     'nav main sort';
   grid-template-columns: 2fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
   color: $main-color-light-2;
   background-color: $main-color-dark-2;
   font-family: inherit;

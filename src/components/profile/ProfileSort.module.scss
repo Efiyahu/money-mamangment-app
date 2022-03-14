@@ -5,21 +5,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  h3 {
-    margin: 1rem 0;
-    height: 6%;
-    border-bottom: 1px solid $main-color-light-2;
-    cursor: default;
-    &:hover {
-      color: $main-color-light;
-      border-color: $main-color-light;
-    }
-  }
+  margin: 0;
 
   .months {
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -28,7 +18,7 @@
 
     .month {
       cursor: pointer;
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 1rem;
       font-size: 0.8em;
       font-weight: bold;
       transition: all 0.5s;

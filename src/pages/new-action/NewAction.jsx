@@ -50,6 +50,7 @@ function NewAction() {
         <form className={classes.form} onSubmit={handleSubmit}>
           <div className={classes.type}>
             <select
+              required
               onChange={handleChange}
               value={inputs.month}
               name="month"
@@ -72,6 +73,7 @@ function NewAction() {
               <option value="December">December</option>
             </select>
             <select
+              required
               onChange={handleChange}
               value={inputs.type}
               name="type"
@@ -84,6 +86,7 @@ function NewAction() {
             </select>
           </div>
           <input
+            required
             className={classes.input}
             value={inputs.title}
             id="title"
@@ -92,6 +95,7 @@ function NewAction() {
             onChange={handleChange}
           />
           <input
+            required
             className={classes.input}
             value={inputs.desc}
             type="text"
@@ -101,6 +105,7 @@ function NewAction() {
             onChange={handleChange}
           />
           <input
+            required
             className={classes.input}
             id="amount"
             name="amount"

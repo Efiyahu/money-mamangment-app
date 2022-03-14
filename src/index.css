@@ -1,11 +1,21 @@
 *,
-html {
+html,
+body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  height: 100vh;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(31, 31, 31);
   overflow: hidden;
+  -ms-oveflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

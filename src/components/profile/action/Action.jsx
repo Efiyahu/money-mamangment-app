@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import classes from './Action.module.scss';
-import { AiFillDelete } from 'react-icons/ai';
 import MonthContext from '../../context/MonthContext';
 
 function Action({ userAction }) {
